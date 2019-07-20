@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-const fibNum = 30
+const fibNum = 10
 
 // high computation
 func fib1(n int) int {
