@@ -23,17 +23,17 @@ func main() {
 	// different port for security
 	wg.Add(1)
 	go func() {
-		http.ListenAndServe(fmt.Sprintf(":%s", pprofPort), pprof.PProfMux())
+		http.ListenAndServe(fmt.Sprintf(":%s", pprofPort), pprof.Mux())
 		wg.Done()
 	}()
 	// different port for exporter
 	wg.Add(1)
 	go func() {
-		http.ListenAndServe(fmt.Sprintf(":%s", exporterPort), prometheus.PrometheusMux())
+		http.ListenAndServe(fmt.Sprintf(":%s", exporterPort), prometheus.Mux())
 		wg.Done()
 	}()
 	// handle main application
-	http.ListenAndServe(fmt.Sprintf(":%s", appPort), application.AppMux())
+	http.ListenAndServe(fmt.Sprintf(":%s", appPort), application.Mux())
 
 	wg.Wait()
 	log.Println("end fibonacci server")
