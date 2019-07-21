@@ -4,14 +4,13 @@ jobs:
     docker:
       # CircleCI Go images available at: https://hub.docker.com/r/circleci/golang/
       - image: circleci/golang:1.11.5
+        environment: GO111MODULE="on"
     working_directory: /go/src/github.com/go-zen-chu/observable-server
-
     steps:
       - checkout
       - run:
           name: "Solve dependency"
           command: |
-            export GO111MODULE=on
             # solve dependency
             go mod download
       - run:
