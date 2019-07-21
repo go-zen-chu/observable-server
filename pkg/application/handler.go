@@ -28,13 +28,18 @@ func fib2(n int) int {
 	}
 	p2 := 1
 	p1 := 1
-	for i := 3; i < n; i++ {
+	i := 3 // start idx from 3
+	for ; i < n; i++ {
 		tmp := p1
 		p1 = p2 + p1
 		p2 = tmp
 		prometheus.Exporter.Fib2Num(i)
 		prometheus.Exporter.Fib2Value(p1)
+		// sleep for getting metric
+		time.Sleep(50 * time.Millisecond)
 	}
+	prometheus.Exporter.Fib2Num(i)
+	prometheus.Exporter.Fib2Value(p2 + p1)
 	return p2 + p1
 }
 
