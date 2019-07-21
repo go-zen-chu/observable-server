@@ -5,6 +5,7 @@
 *.so
 *.dylib
 main
+observable-server
 
 # Test binary, build with `go test -c`
 *.test
