@@ -3,6 +3,7 @@
 [![CircleCI](https://circleci.com/gh/go-zen-chu/observable-server.svg?style=svg)](https://circleci.com/gh/go-zen-chu/observable-server)
 [![Documentation](https://godoc.org/github.com/go-zen-chu/observable-server?status.svg)](http://godoc.org/github.com/go-zen-chu/observable-server)
 [![GitHub issues](https://img.shields.io/github/issues/go-zen-chu/observable-server.svg)](https://github.com/go-zen-chu/observable-server/issues)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgo-zen-chu%2Fobservable-server.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgo-zen-chu%2Fobservable-server?ref=badge_shield)
 
 Sample application of golang observable server.
 
@@ -158,3 +159,6 @@ In my experience, depending too much on logs may cause issue like,
 3. logs are more difficult to automate action (e.g. restart or scale up) than metrics because you need to make rule
 
 Logging is easy and powerful way to observe your app but be careful when you think you are too dependent on logging.
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgo-zen-chu%2Fobservable-server.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgo-zen-chu%2Fobservable-server?ref=badge_large)
